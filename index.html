@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Home Section -->
+    <section id="Home">
+
+        <!-- Welcome Text with Typing Effect -->
+        <header class="name">
+            <h2 id="welcome-text"></h2> <!-- Empty initially for the typing effect -->
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h1>Wasim Chand Shaikh</h1>
+            <p>I am a Java Full Stack Developer.</p>
+            <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+        </section>
+
+        <!-- Profile Image -->
+        <!-- <div class="profile-container">
+            <img src="profile.jpg" alt="Wasim Chand Shaikh" class="profile-img">
+        </div> -->
+
+        <!-- Navigation Panel -->
+        <div class="nav-panel">
+            <a href="#" class="nav-btn">Home</a>
+            <a href="#about" class="nav-btn">About</a>
+            <a href="#education " class="nav-btn">Education</a>
+
+            <a href="#skills" class="nav-btn">Skills</a>
+            <a href="#projects" class="nav-btn">Projects</a>
+
+            <a href="#contact" class="nav-btn">Contact</a>
+        </div>
+
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>
+            Hello and welcome to my portfolio! My name is WASIM SHAIKH , and I'm Full Stack Java developer.
+            I am skilled in HTML , CSS , Java and SQL .
+            
+            I am a quick learner and enjoy tackling new challenges in the field of software development. I have experience with various Java frameworks, such as Spring and Hibernate, and enjoy collaborating with cross-functional teams to create innovative solutions.
+            
+            I believe that creativity is an important part of any field, including software development, and I strive to bring that creativity to everything I do.
+            
+            I am excited about the opportunity to work on new projects and continue to learn and grow as both a Java developer and a creative individual. Thank you for taking the time to learn more about me and my work. I look forward to connecting with you and discussing potential opportunities!"</p>
+    </section>
+
+    <section id="education" class="education-section">
+        
+        <h2>Education</h2>
+    <p>
+        <ul class="education-list">
+            <li id="l1"><strong>Bachelor of Engineering (BE)</strong> <br> <ul> - Jaihind College Of Enginnering <br></ul><ul> -June 2024 <br></ul> <ul> - CGPA - 8.52 <br></ul>  </li> <br>
+            <li id="l1"><strong>Higher Secondary School</strong> <br> <ul> - Guruvarya R.P. Sabnis Jr.College<br></ul><ul> - Feb 2019 <br></ul><ul> - Grades - 73.23 <br></ul>  </li> <br>
+            <li id="l1"><strong> Secondary School</strong> <br> <ul> - Guruvarya R.P. Sabnis Vidyamandir<br></ul><ul> - March 2017 <br></ul><ul> - Grades - 94.20 <br></ul>  </li> <br>
+        </ul>
+    </p>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fa-brands fa-java"></i>
+                <p>Java</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-solid fa-database"></i>
+                <p>SQL</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            
+        </div>
+    </section>
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            
+            <button class="project-btn">NVIDIA Fibernet Bill System</button>
+            <button class="project-btn">Student Grade Management System</button>
+            <a href="https://github.com/wasimcshaikh/Notepad-Compiler" target="_blank">
+                <button class="project-btn">Notepad Compiler</button>
+            </a>
+            
+            
+            <button class="project-btn" >Portfolio Website</button>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Contact us</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">SUBMIT FORM</button>
+            </form>
+    
+            <div class="contact-details">
+                <p><strong style="color: red;">Call Us</strong><br>8788470791</p>
+                <p><strong style="color: red;">Address</strong><br>Narayangaon , Pune - 410504</p>
+                <p><strong style="color: red;">Email Us</strong><br><a href="mailto:shaikhwasim3010@gmail.com">shaikhwasim3010@gmail.com</a></p>
+    
+                <div class="social-icons">
+                    
+                    <a href="https://github.com/wasimcshaikh"><img src="github-icon.png" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/in/wasim-shaikh-1b8a1b24b"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:shaikhwasim3010@gmail.com"><img src="Email.jpeg" alt="Email"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- JavaScript for Typing Effect -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Welcome To My Portfolio!";
+            let index = 0;
+            function typeEffect() {
+                if (index < text.length) {
+                    document.getElementById("welcome-text").innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 100); // Adjust speed (100ms per character)
+                }
+            }
+            typeEffect(); // Start the effect when the page loads
+        });
+    </script>
+
+</body>
+</html>
